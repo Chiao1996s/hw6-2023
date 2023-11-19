@@ -1,13 +1,9 @@
 var video;
 
 window.addEventListener("load", function() {
-	console.log("Good job opening the window");
-
 	video = document.querySelector("#player1");
 	video.autoplay = false;
 	video.loop = false;
-	console.log("Autoplay is set to " + video.autoplay);
-	console.log("Loop is set to " + video.autoplay);
 
 });
 
@@ -16,14 +12,14 @@ document.getElementById("play").addEventListener("click", function() {
 
 	video.play();
 	video.volume= 0.05;
-	console.log("Good job changing the volume");
+	
 });
 
 
 document.getElementById("pause").addEventListener("click", function() {
 
 	video.pause();
-	console.log("Good job stop the video");
+	
 });
 
 
