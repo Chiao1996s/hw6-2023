@@ -1,11 +1,26 @@
 var video;
+var volumeSlider = document.getElementById('slider');
+var volumeText = document.getElementById('volume');
 
 window.addEventListener("load", function() {
 	video = document.querySelector("#player1");
 	video.autoplay = false;
 	video.loop = false;
 
+	
+    volumeText.innerHTML = (video.volume * 100) + '%';
+
+	volumeSlider.addEventListener('input', function() {
+        video.volume = volumeSlider.value / 100;
+        volumeText.innerHTML = volumeSlider.value + '%';
+    });
+
+
+
 });
+
+
+
 
 
 document.getElementById("play").addEventListener("click", function() {
@@ -67,17 +82,7 @@ document.getElementById("mute").addEventListener("click", function() {
 });
 
 
-var volumeSlider = document.getElementById('slider');
-var volumeText = document.getElementById('volume');
 
-window.addEventListener("load", function() {
-
-	volumeSlider.addEventListener('input', function() {
-		video.volume = volumeSlider.value / 100;
-		volumeText.innerHTML = volumeSlider.value + '%';
-    });
-
-});
 
 
 document.getElementById('vintage').addEventListener('click', function() {
