@@ -11,7 +11,7 @@ window.addEventListener("load", function() {
 document.getElementById("play").addEventListener("click", function() {
 
 	video.play();
-	video.volume= 0.05;
+	video.volume= 1;
 	
 });
 
