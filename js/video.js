@@ -6,7 +6,8 @@ window.addEventListener("load", function() {
 	video = document.querySelector("#player1");
 	video.autoplay = false;
 	video.loop = false;
-	console.log("auto is set to " + video.autoplay);
+	console.log("Autoplay is set to " + video.autoplay);
+	console.log("Loop is set to " + video.autoplay);
 
 });
 
@@ -35,7 +36,7 @@ document.getElementById("slower").addEventListener("click", function() {
 
 document.getElementById("faster").addEventListener("click", function() {
 
-	video.playbackRate *=1.11111;
+	video.playbackRate /=0.9;
 	console.log("New playback rate:"+ video.playbackRate);
 });
 
