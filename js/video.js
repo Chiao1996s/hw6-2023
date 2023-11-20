@@ -86,7 +86,7 @@ document.getElementById("mute").addEventListener("click", function() {
 
 document.getElementById('vintage').addEventListener('click', function() {
     
-    video.classList.toggle('oldSchool');
+    video.classList.add('oldSchool');
 });
 
 
